@@ -18,7 +18,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Your Financial Future Starts Here
+              Your Financial Future Starts Here with us
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
               Get the funding you need with competitive rates and flexible terms tailored to your goals.
