@@ -30,11 +30,20 @@ export default function Contact() {
             status: 'pending'
           }
         ]);
-
+  
       if (error) {
         throw error;
       }
-
+  
+      // Send email to admin
+      await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
       setShowThankYouModal(true);
       setFormData({
         name: '',
