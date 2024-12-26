@@ -18,7 +18,8 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const { data, error } = await supabase
+      // First save to Supabase
+      const { error: supabaseError } = await supabase
         .from('my_loans_applications')
         .insert([
           {
@@ -30,20 +31,27 @@ export default function Contact() {
             status: 'pending'
           }
         ]);
-  
-      if (error) {
-        throw error;
+
+      if (supabaseError) {
+        throw supabaseError;
       }
-  
-      // Send email to admin
-      await fetch('/api/sendEmail', {
+
+      // Then send emails
+      const emailResponse = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-  
+
+      const emailData = await emailResponse.json();
+
+      if (!emailResponse.ok) {
+        throw new Error(emailData.details || 'Failed to send email');
+      }
+
+      // Only show thank you modal if both operations succeed
       setShowThankYouModal(true);
       setFormData({
         name: '',
