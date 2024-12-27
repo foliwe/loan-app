@@ -167,7 +167,7 @@ export default function Home() {
             <div className="flex flex-col gap-20 items-center py-20">
 
               <div className="text-center max-w-md font-heading text-3xl font-bold">
-              Personal loans through Upstart are quick and easy
+              Personal loans through Loan & Asset Finance are quick and easy
               </div>
 
               <div className="text-center max-w-md">
