@@ -1,6 +1,8 @@
 {
-  "/apply/page": "app/apply/page.js",
   "/page": "app/page.js",
-  "/application-success/page": "app/application-success/page.js",
-  "/api/sendEmail/route": "app/api/sendEmail/route.js"
+  "/about/page": "app/about/page.js",
+  "/services/business/page": "app/services/business/page.js",
+  "/testimonials/page": "app/testimonials/page.js",
+  "/services/personal/page": "app/services/personal/page.js",
+  "/contact/page": "app/contact/page.js"
 }
