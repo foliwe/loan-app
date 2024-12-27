@@ -6,7 +6,7 @@ const LoanCard = ({ title, features, id }: { title: string; features: string[]; 
       <h3 className="text-xl font-bold text-white">{title}</h3>
     </div>
     <div className="p-6">
-      <ul className="space-y-3 text-gray-700">
+      <ul className="space-y-3 ">
         {features.map((feature, index) => (
           <li key={index}>✓ {feature}</li>
         ))}
@@ -26,6 +26,8 @@ export default function Services() {
     {
       id: "personal",
       title: "Personal Loans",
+      description: "Flexible financing solutions for your personal needs",
+      link: "/services/personal",
       features: [
         "Flexible repayment terms",
         "Competitive interest rates from 5.99%",
@@ -37,6 +39,8 @@ export default function Services() {
     {
       id: "business",
       title: "Business Loans",
+      description: "Grow your business with our flexible financing options",
+      link: "/services/business",
       features: [
         "Working capital financing",
         "Equipment and inventory funding",
@@ -48,6 +52,8 @@ export default function Services() {
     {
       id: "student",
       title: "Student Loans",
+      description: "Invest in your education with affordable rates",
+      link: "/services/student",
       features: [
         "Low interest rates for students",
         "Deferred payment options",
@@ -59,89 +65,61 @@ export default function Services() {
     {
       id: "agricultural",
       title: "Agricultural Loans",
+      description: "Supporting farmers with flexible financing solutions",
+      link: "/services/agricultural",
       features: [
-        "Seasonal repayment schedules",
-        "Equipment financing",
-        "Crop and livestock funding",
-        "Land purchase options",
-        "Weather-related flexibility"
-      ]
-    },
-    {
-      id: "medical",
-      title: "Medical Loans",
-      features: [
-        "Cover emergency medical expenses",
-        "Elective procedure financing",
-        "Quick approval for urgent care",
-        "Flexible repayment terms",
-        "Coverage for family medical needs"
+        "Seasonal payment schedules",
+        "Competitive interest rates",
+        "Equipment financing options",
+        "Land purchase loans",
+        "Crop and livestock funding"
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen py-12">
+    <main className="min-h-screen bg-sky-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-          <p className="text-xl text-gray-600">Comprehensive Loan Solutions for Every Need</p>
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Loan Services</h1>
+          <p className="text-xl text-gray-600">Discover the perfect financing solution for your needs</p>
         </div>
 
-        {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {loanTypes.map((loan) => (
-            <LoanCard
-              key={loan.id}
-              id={loan.id}
-              title={loan.title}
-              features={loan.features}
-            />
+            <div key={loan.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">{loan.title}</h2>
+                <p className="text-gray-600 mb-6">{loan.description}</p>
+                <ul className="space-y-3 mb-8">
+                  {loan.features.slice(0, 3).map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <svg className="h-6 w-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex justify-between items-center">
+                  <Link
+                    href={loan.link}
+                    className="text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300"
+                  >
+                    Apply Now
+                  </Link>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-
-        {/* Process Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Loan Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-lg font-semibold mb-2">Apply Online</h3>
-              <p className="text-gray-600">Fill out our simple online application form</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-lg font-semibold mb-2">Document Submission</h3>
-              <p className="text-gray-600">Upload required documents</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-lg font-semibold mb-2">Verification</h3>
-              <p className="text-gray-600">Quick verification process</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-lg font-semibold mb-2">Loan Disbursement</h3>
-              <p className="text-gray-600">Get your loan amount quickly</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-blue-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-          <p className="text-gray-700 mb-6">
-            Our team is ready to help you choose the right loan for your needs.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-600 text-white py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
-          >
-            Contact Us Today
-          </Link>
-        </div>
       </div>
-    </div>
+    </main>
   );
 }

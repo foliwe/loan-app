@@ -1,14 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'LoanEase - Quick and Easy Loans',
-  description: 'Get quick and easy loans with flexible repayment options. Use our loan calculator to find the perfect loan for your needs.',
+  title: 'Loan Web App',
+  description: 'Get the funding you need with competitive rates and flexible terms',
 }
 
 export default function RootLayout({
@@ -18,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-lato">
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">

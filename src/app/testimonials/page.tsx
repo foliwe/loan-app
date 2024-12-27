@@ -47,12 +47,12 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Client Testimonials</h1>
-          <p className="text-xl text-gray-600">Hear What Our Clients Say About Us</p>
+          <h1 className="text-4xl font-bold  mb-4">Client Testimonials</h1>
+          <p className="text-xl ">Hear What Our Clients Say About Us</p>
         </div>
 
         {/* Testimonials Grid */}
@@ -62,14 +62,14 @@ export default function Testimonials() {
               <div className="mb-4">
                 {renderStars(testimonial.rating)}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+              <p className=" mb-6 italic">"{testimonial.content}"</p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
-                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  <h3 className="font-semibold ">{testimonial.name}</h3>
+                  <p className=" text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </div>
@@ -96,8 +96,8 @@ export default function Testimonials() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Join Our Satisfied Clients?</h2>
-          <p className="text-gray-600 mb-8">
+          <h2 className="text-2xl font-bold  mb-4">Ready to Join Our Satisfied Clients?</h2>
+          <p className=" mb-8">
             Apply now and experience our award-winning service for yourself.
           </p>
           <a

@@ -40,7 +40,7 @@ const LoanCalculator = () => {
     <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block  font-medium text-gray-700 mb-2">
             Loan Amount: ${loanAmount.toLocaleString()}
           </label>
           <input
@@ -52,14 +52,14 @@ const LoanCalculator = () => {
             onChange={(e) => setLoanAmount(Number(e.target.value))}
             className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
           />
-          <div className="flex justify-between text-sm text-gray-600 mt-1">
+          <div className="flex justify-between  text-gray-600 mt-1">
             <span>$1,000</span>
             <span>$100,000</span>
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block  font-medium text-gray-700 mb-2">
             Loan Term: {loanTerm} months
           </label>
           <input
@@ -71,7 +71,7 @@ const LoanCalculator = () => {
             onChange={(e) => setLoanTerm(Number(e.target.value))}
             className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
           />
-          <div className="flex justify-between text-sm text-gray-600 mt-1">
+          <div className="flex justify-between  text-gray-600 mt-1">
             <span>6 months</span>
             <span>60 months</span>
           </div>
@@ -80,19 +80,19 @@ const LoanCalculator = () => {
         <div className="bg-gray-50 p-4 rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center">
-              <p className="text-sm text-gray-600">Monthly Payment</p>
+              <p className=" text-gray-600">Monthly Payment</p>
               <p className="text-xl font-bold text-blue-600">
                 ${monthlyPayment.toFixed(2)}
               </p>
             </div>
             <div className="text-center">
-              <p className="text-sm text-gray-600">Total Payment</p>
+              <p className=" text-gray-600">Total Payment</p>
               <p className="text-xl font-bold text-blue-600">
                 ${totalPayment.toFixed(2)}
               </p>
             </div>
             <div className="text-center">
-              <p className="text-sm text-gray-600">Interest Rate</p>
+              <p className=" text-gray-600">Interest Rate</p>
               <p className="text-xl font-bold text-blue-600">
                 {interestRate.toFixed(2)}%
               </p>

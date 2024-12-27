@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-lato text-sky-800 bg-sky-50;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    @apply font-heading;
+  }
+}
+
+@layer base {
+  html {
+    font-size: 1.1rem; /* Default size for small devices */
+  }
+}
+
+@layer utilities {
+  /* Navbar animations */
+  .nav-link-hover {
+    @apply relative overflow-hidden;
+  }
+  
+  .nav-link-hover::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-blue-600;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link-hover:hover::after {
+    transform: translateX(0);
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom transitions */
+  .transition-navbar {
+    transition: background-color 0.3s ease-in-out,
+                padding 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hamburger menu animations */
+  .hamburger-line {
+    @apply absolute h-0.5 w-6 transform transition-all duration-300 ease-in-out;
+  }
+}
+
+
+.btn-primary { 
+    @apply bg-blue-600 font-heading text-white px-8 py-3 rounded-full  font-semibold hover:bg-blue-700 transition duration-300 text-center;
+ }
