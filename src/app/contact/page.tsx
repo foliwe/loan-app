@@ -108,15 +108,16 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Office Address</h3>
                   <p className="">
-                    123 Finance Street<br />
-                    New York, NY 10001
+                  32 Purcells Avenue, <br />
+                  Edgware, Middlesex,<br />
+                  HA8 8DZ
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Contact Information</h3>
                   <p className="">
-                    Email: info@loanease.com<br />
+                    Email: info@loanassetfinance.co.uk<br />
                     Phone: (555) 123-4567
                   </p>
                 </div>
@@ -181,25 +182,7 @@ export default function Contact() {
                 />
               </div>
 
-              <div>
-                <label htmlFor="loanType" className="block  font-medium  mb-1">
-                  Loan Type
-                </label>
-                <select
-                  id="loanType"
-                  name="loanType"
-                  value={formData.loanType}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                >
-                  {loanTypes.map((loan) => (
-                    <option key={loan.value} value={loan.value}>
-                      {loan.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
+           
               <div>
                 <label htmlFor="message" className="block  font-medium  mb-1">
                   Message

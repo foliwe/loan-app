@@ -12,7 +12,7 @@ const LoanCard = ({ title, features, id }: { title: string; features: string[]; 
         ))}
       </ul>
       <Link 
-        href="/contact"
+        href="/apply"
         className="mt-6 block text-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
       >
         Apply Now
@@ -81,23 +81,23 @@ export default function Services() {
     <main className="min-h-screen bg-sky-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Loan Services</h1>
-          <p className="text-xl text-gray-600">Discover the perfect financing solution for your needs</p>
+          <h1 className="text-4xl font-bold  mb-4">Our Loans</h1>
+          <p className="text-xl ">Discover the perfect financing solution for your needs</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {loanTypes.map((loan) => (
             <div key={loan.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">{loan.title}</h2>
-                <p className="text-gray-600 mb-6">{loan.description}</p>
+                <h2 className="text-2xl font-bold  mb-4">{loan.title}</h2>
+                <p className=" mb-6">{loan.description}</p>
                 <ul className="space-y-3 mb-8">
                   {loan.features.slice(0, 3).map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <svg className="h-6 w-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -109,8 +109,8 @@ export default function Services() {
                     Learn More →
                   </Link>
                   <Link
-                    href="/contact"
-                    className="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300"
+                    href="/apply"
+                    className="btn-primary py-2"
                   >
                     Apply Now
                   </Link>

@@ -57,5 +57,5 @@
 
 
 .btn-primary { 
-    @apply bg-blue-600 font-heading text-white px-8 py-3 rounded-full  font-semibold hover:bg-blue-700 transition duration-300 text-center;
+    @apply bg-sky-600 font-heading text-white px-8 rounded-full  font-semibold hover:bg-blue-700 transition duration-300 text-center;
  }

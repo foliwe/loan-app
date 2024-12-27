@@ -174,8 +174,8 @@ export default function Home() {
                 <div className="w-10 h-10 mx-auto mb-2 font-bold  text-2xl font-heading text-white bg-cyan-600 rounded-full flex items-center justify-center">
                   1
                 </div>
-                <h3 className="text-xl font-semibold  font-heading mb-2">Get your rates</h3>
-                <p className="text-lg">It takes less than 5 minutes to check your rate—and it won’t affect your credit score.¹</p>
+                <h3 className="text-xl font-semibold  font-heading mb-2">Apply online</h3>
+                <p className="text-lg">It takes less than 5 minutes to fill out our online application form¹</p>
               </div>
 
               <div className="text-center max-w-md">
@@ -235,7 +235,7 @@ export default function Home() {
             Our team of experts is ready to help you find the perfect loan solution
           </p>
           <Link
-            href="/contact"
+            href="/apply"
             className="inline-block bg-white font-heading text-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
           >
             Apply Now

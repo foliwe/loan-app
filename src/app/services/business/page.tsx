@@ -87,8 +87,8 @@ export default function BusinessLoans() {
 
         <div className="text-center">
           <Link
-            href="/contact"
-            className="inline-block btn-primary"
+            href="/apply"
+            className="inline-block btn-primary py-2"
           >
             Apply Now
           </Link>
