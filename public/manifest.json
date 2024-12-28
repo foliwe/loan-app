@@ -1,31 +1,74 @@
 {
-  "name": "LoanEase",
+  "name": "LoanEase - Smart Financial Solutions",
   "short_name": "LoanEase",
-  "description": "Smart Financial Solutions",
+  "description": "Quick and easy loan applications with competitive rates. Apply now for personal and business loans with transparent terms.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0066FF",
+  "orientation": "portrait",
+  "scope": "/",
+  "categories": ["finance", "business", "productivity"],
+  "screenshots": [
+    {
+      "src": "/images/screenshots/home-screen.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Home screen of LoanEase"
+    },
+    {
+      "src": "/images/screenshots/loan-calculator.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Loan Calculator"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Apply for Loan",
+      "url": "/apply",
+      "description": "Start your loan application"
+    },
+    {
+      "name": "Loan Calculator",
+      "url": "/services/calculator",
+      "description": "Calculate your loan payments"
+    }
+  ],
   "icons": [
     {
       "src": "/images/favicon-16x16.png",
       "sizes": "16x16",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/images/favicon-32x32.png",
       "sizes": "32x32",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/images/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/images/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.loanease.app",
+      "id": "com.loanease.app"
+    }
+  ],
+  "prefer_related_applications": false
 }

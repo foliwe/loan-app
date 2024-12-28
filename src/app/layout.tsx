@@ -4,84 +4,80 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
+  minimumScale: 1,
   viewportFit: 'cover',
   themeColor: '#0066FF'
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://loanease.com'), // Replace with your actual domain when deployed
+  metadataBase: new URL('https://loanease.com'),
   title: {
-    default: 'LoanEase | Smart Financial Solutions',
+    default: 'LoanEase | Smart Financial Solutions for Your Future',
     template: '%s | LoanEase'
   },
-  description: 'LoanEase provides smart, transparent, and accessible financial solutions. Apply for loans easily and get quick approvals with competitive rates.',
-  keywords: ['loans', 'financial services', 'personal loans', 'business loans', 'loan application'],
+  description: 'LoanEase offers innovative financial solutions with quick approvals and competitive rates. Apply for personal and business loans easily with our transparent process.',
+  keywords: [
+    'loan application',
+    'quick loans',
+    'personal loans',
+    'business loans',
+    'financial services',
+    'loan calculator',
+    'competitive rates',
+    'easy loan approval',
+    'transparent lending',
+    'secure loans'
+  ],
   authors: [{ name: 'LoanEase Team' }],
   creator: 'LoanEase',
   publisher: 'LoanEase',
-  icons: {
-    icon: [
-      { url: '/images/favicon.ico' },
-      { url: '/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/favicon.svg', type: 'image/svg+xml' },
-    ],
-    apple: [
-      { url: '/images/apple-touch-icon.png' },
-    ],
-    other: [
-      {
-        rel: 'mask-icon',
-        url: '/images/favicon.svg',
-        color: '#0066FF'
-      }
-    ]
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
-  manifest: '/manifest.json',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'LoanEase',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-us',
+    },
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
     siteName: 'LoanEase',
+    title: 'LoanEase | Smart Financial Solutions',
+    description: 'Transform your financial future with LoanEase. Quick approvals, competitive rates, and transparent process.',
+    url: 'https://loanease.com',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'LoanEase - Financial Solutions',
+        alt: 'LoanEase - Smart Financial Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    creator: '@loanease', // Replace with your actual Twitter handle
+    title: 'LoanEase | Smart Financial Solutions',
+    description: 'Transform your financial future with LoanEase. Quick approvals, competitive rates, and transparent process.',
+    creator: '@loanease',
     images: ['/images/og-image.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
   },
+  category: 'finance',
 }
 
 export default function RootLayout({
@@ -91,6 +87,55 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="schema-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'LoanEase',
+              url: 'https://loanease.com',
+              logo: 'https://loanease.com/images/logo.png',
+              sameAs: [
+                'https://www.facebook.com/loanease',
+                'https://twitter.com/loanease',
+                'https://www.linkedin.com/company/loanease',
+              ],
+              contactPoint: [
+                {
+                  '@type': 'ContactPoint',
+                  telephone: '+1-800-LOANEASE',
+                  contactType: 'customer service',
+                  areaServed: 'US',
+                  availableLanguage: ['English'],
+                },
+              ],
+            })
+          }}
+        />
+        <Script
+          id="schema-webpage"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'LoanEase',
+              url: 'https://loanease.com',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://loanease.com/search?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            })
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col">
           <Navbar />

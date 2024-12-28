@@ -68,7 +68,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="relative w-44 h-12">
               <Image
-                src={scrolled || !isHomePage ? "/images/Logo.png" : "/images/logoinvert.png"}
+                src={scrolled || !isHomePage ? "/images/Logonew.png" : "/images/logoinvertnew.png"}
                 alt="LoanEase Logo"
                 fill
                 style={{ objectFit: 'contain' }}
