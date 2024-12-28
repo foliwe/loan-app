@@ -1,3 +1,31 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About LoanEase | Your Trusted Financial Partner',
+  description: 'Learn about LoanEase - your trusted partner in financial solutions. Discover our mission, values, and commitment to providing transparent loan services.',
+  openGraph: {
+    title: 'About LoanEase | Your Trusted Financial Partner',
+    description: 'Learn about LoanEase - your trusted partner in financial solutions. Discover our mission, values, and commitment to providing transparent loan services.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'LoanEase',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'LoanEase - Financial Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About LoanEase | Your Trusted Financial Partner',
+    description: 'Learn about LoanEase - your trusted partner in financial solutions. Discover our mission, values, and commitment to providing transparent loan services.',
+    images: ['/images/og-image.jpg'],
+  },
+}
+
 export default function About() {
   return (
     <div className="min-h-screen py-32">

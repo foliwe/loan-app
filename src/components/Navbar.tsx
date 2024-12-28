@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -65,8 +66,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              LoanEase
+            <Link href="/" className="relative w-44 h-12">
+              <Image
+                src={scrolled || !isHomePage ? "/images/Logo.png" : "/images/logoinvert.png"}
+                alt="LoanEase Logo"
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+                className="transition-opacity duration-300"
+              />
             </Link>
           </div>
 

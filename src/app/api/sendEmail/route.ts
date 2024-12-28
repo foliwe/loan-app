@@ -58,37 +58,14 @@ export async function POST(request: Request) {
       `,
     };
 
-    // Send confirmation email to user
-    const userMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: formData.email,
-      subject: 'Loan Application Received',
-      html: `
-        <h2>Thank You for Your Application</h2>
-        <p>Dear ${formData.name},</p>
-        <p>We have received your loan application. Our team will review it and get back to you within 24-48 business hours.</p>
-        <p>Application Details:</p>
-        <ul>
-          <li>Loan Type: ${formData.loanType}</li>
-          <li>Phone: ${formData.phone}</li>
-        </ul>
-        <p>If you have any questions, please don't hesitate to contact us.</p>
-        <p>Best regards,<br>Your Loan Team</p>
-      `,
-    };
-
     try {
       console.log('Sending admin email...');
       const adminInfo = await transporter.sendMail(adminMailOptions);
       console.log('Admin email sent:', adminInfo.response);
 
-      console.log('Sending user email...');
-      const userInfo = await transporter.sendMail(userMailOptions);
-      console.log('User email sent:', userInfo.response);
-
       return NextResponse.json({ 
         success: true,
-        message: 'Emails sent successfully'
+        message: 'Application submitted successfully'
       });
     } catch (emailError: any) {
       console.error('Error sending email:', emailError);
@@ -101,12 +78,9 @@ export async function POST(request: Request) {
       );
     }
   } catch (error: any) {
-    console.error('API error:', error);
+    console.error('Server error:', error);
     return NextResponse.json(
-      { 
-        error: 'Internal server error',
-        details: error.message
-      },
+      { error: 'Server error', details: error.message },
       { status: 500 }
     );
   }

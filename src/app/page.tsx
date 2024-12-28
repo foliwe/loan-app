@@ -1,6 +1,30 @@
 import LoanCalculator from '@/components/LoanCalculator';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'LoanEase | Smart Financial Solutions Made Simple',
+  description: 'Get the funding you need with competitive rates and flexible terms. LoanEase offers personal and business loans with quick approvals and transparent terms.',
+  openGraph: {
+    title: 'LoanEase | Smart Financial Solutions Made Simple',
+    description: 'Get the funding you need with competitive rates and flexible terms. LoanEase offers personal and business loans with quick approvals and transparent terms.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'LoanEase - Financial Solutions Made Simple',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LoanEase | Smart Financial Solutions Made Simple',
+    description: 'Get the funding you need with competitive rates and flexible terms. LoanEase offers personal and business loans with quick approvals and transparent terms.',
+    images: ['/images/og-image.jpg'],
+  },
+}
 
 export default function Home() {
   return (
@@ -113,7 +137,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+            {[/* eslint-disable @typescript-eslint/no-unused-vars */
               {
                 title: "Personal Loans",
                 description: "Quick personal loans for your immediate needs",
@@ -153,7 +177,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            ))}
+            ))/* eslint-enable @typescript-eslint/no-unused-vars */}
           </div>
         </div>
       </section>
