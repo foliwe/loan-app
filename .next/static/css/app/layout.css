@@ -698,9 +698,6 @@ html {
 .h-full{
   height: 100%;
 }
-.h-24{
-  height: 6rem;
-}
 .max-h-0{
   max-height: 0px;
 }
@@ -728,6 +725,9 @@ html {
 .w-4{
   width: 1rem;
 }
+.w-44{
+  width: 11rem;
+}
 .w-5{
   width: 1.25rem;
 }
@@ -742,15 +742,6 @@ html {
 }
 .w-full{
   width: 100%;
-}
-.w-48{
-  width: 12rem;
-}
-.w-44{
-  width: 11rem;
-}
-.w-40{
-  width: 10rem;
 }
 .max-w-2xl{
   max-width: 42rem;
@@ -1059,9 +1050,6 @@ html {
 .font-heading{
   font-family: Montserrat, sans-serif;
 }
-.font-lato{
-  font-family: Lato, sans-serif;
-}
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1213,13 +1201,13 @@ html {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.transition-transform{
-  transition-property: transform;
+.transition-opacity{
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.transition-opacity{
-  transition-property: opacity;
+.transition-transform{
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }

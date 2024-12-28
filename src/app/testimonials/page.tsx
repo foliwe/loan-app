@@ -101,7 +101,7 @@ export default function Testimonials() {
             Apply now and experience our award-winning service for yourself.
           </p>
           <a
-            href="/contact"
+            href="/apply"
             className="inline-block bg-blue-600 text-white py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
           >
             Apply for a Loan
