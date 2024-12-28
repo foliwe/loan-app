@@ -1,10 +1,18 @@
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#0066FF'
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://loanease.com'), // Replace with your actual domain when deployed
@@ -73,13 +81,6 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    viewportFit: 'cover',
-  },
-  themeColor: '#0066FF'
 }
 
 export default function RootLayout({

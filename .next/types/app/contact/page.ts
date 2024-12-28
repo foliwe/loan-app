@@ -1,8 +1,8 @@
-// File: C:\Users\foliw\CascadeProjects\loan-web-app\src\app\apply\page.tsx
-import * as entry from '../../../../src/app/apply/page.js'
+// File: C:\Users\foliw\CascadeProjects\loan-web-app\src\app\contact\page.tsx
+import * as entry from '../../../../src/app/contact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/apply/page.js')
+type TEntry = typeof import('../../../../src/app/contact/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
