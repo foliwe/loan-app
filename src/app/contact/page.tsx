@@ -7,7 +7,6 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
-    loanType: 'personal',
     message: ''
   });
 
@@ -26,7 +25,6 @@ export default function Contact() {
             name: formData.name,
             email: formData.email,
             phone: formData.phone,
-            loan_type: formData.loanType,
             message: formData.message,
             status: 'pending'
           }
@@ -57,7 +55,6 @@ export default function Contact() {
         name: '',
         email: '',
         phone: '',
-        loanType: 'personal',
         message: ''
       });
     } catch (error) {
